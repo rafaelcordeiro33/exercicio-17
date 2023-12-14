@@ -16,6 +16,7 @@ namespace exercicio_17
         public void AdicionarNome(string nome,string email)
         {
             listBox1.Items.Add($"{nome} - ({email})");
+
         }
 
         private void bttn_sair_Click(object sender, EventArgs e)
