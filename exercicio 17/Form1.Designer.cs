@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            button4 = new Button();
-            button5 = new Button();
+            bttn_GuardarRegisto = new Button();
+            bttn_VerRegistos = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            checkBox1 = new CheckBox();
-            button1 = new Button();
+            txtNome = new TextBox();
+            txtEmail = new TextBox();
+            txtPassword = new TextBox();
+            VerPassword = new CheckBox();
+            bttn_Sair = new Button();
             SuspendLayout();
             // 
-            // button4
+            // bttn_GuardarRegisto
             // 
-            button4.Location = new Point(275, 335);
-            button4.Name = "button4";
-            button4.Size = new Size(235, 79);
-            button4.TabIndex = 3;
-            button4.Text = "Guardar Registo";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            bttn_GuardarRegisto.Location = new Point(275, 335);
+            bttn_GuardarRegisto.Name = "bttn_GuardarRegisto";
+            bttn_GuardarRegisto.Size = new Size(235, 79);
+            bttn_GuardarRegisto.TabIndex = 3;
+            bttn_GuardarRegisto.Text = "Guardar Registo";
+            bttn_GuardarRegisto.UseVisualStyleBackColor = true;
+            bttn_GuardarRegisto.Click += bttn_GuardarRegisto_Click;
             // 
-            // button5
+            // bttn_VerRegistos
             // 
-            button5.Location = new Point(592, 390);
-            button5.Name = "button5";
-            button5.Size = new Size(196, 48);
-            button5.TabIndex = 4;
-            button5.Text = "Ver Registos";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            bttn_VerRegistos.Location = new Point(592, 390);
+            bttn_VerRegistos.Name = "bttn_VerRegistos";
+            bttn_VerRegistos.Size = new Size(196, 48);
+            bttn_VerRegistos.TabIndex = 4;
+            bttn_VerRegistos.Text = "Ver Registos";
+            bttn_VerRegistos.UseVisualStyleBackColor = true;
+            bttn_VerRegistos.Click += bttn_VerRegistos_Click;
             // 
             // label1
             // 
@@ -88,47 +88,47 @@
             label3.TabIndex = 7;
             label3.Text = "Password:";
             // 
-            // textBox1
+            // txtNome
             // 
-            textBox1.Location = new Point(299, 88);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(183, 31);
-            textBox1.TabIndex = 8;
+            txtNome.Location = new Point(299, 88);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(183, 31);
+            txtNome.TabIndex = 8;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(299, 163);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(183, 31);
-            textBox2.TabIndex = 9;
+            txtEmail.Location = new Point(299, 163);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(183, 31);
+            txtEmail.TabIndex = 9;
             // 
-            // textBox3
+            // txtPassword
             // 
-            textBox3.Location = new Point(299, 243);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(183, 31);
-            textBox3.TabIndex = 10;
+            txtPassword.Location = new Point(299, 243);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(183, 31);
+            txtPassword.TabIndex = 10;
             // 
-            // checkBox1
+            // VerPassword
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(495, 247);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(62, 29);
-            checkBox1.TabIndex = 11;
-            checkBox1.Text = "ver";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            VerPassword.AutoSize = true;
+            VerPassword.Location = new Point(495, 247);
+            VerPassword.Name = "VerPassword";
+            VerPassword.Size = new Size(62, 29);
+            VerPassword.TabIndex = 11;
+            VerPassword.Text = "ver";
+            VerPassword.UseVisualStyleBackColor = true;
+            VerPassword.CheckedChanged += VerPassword_CheckedChanged;
             // 
-            // button1
+            // bttn_Sair
             // 
-            button1.Location = new Point(726, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(62, 48);
-            button1.TabIndex = 12;
-            button1.Text = "Sair";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            bttn_Sair.Location = new Point(726, 12);
+            bttn_Sair.Name = "bttn_Sair";
+            bttn_Sair.Size = new Size(62, 48);
+            bttn_Sair.TabIndex = 12;
+            bttn_Sair.Text = "Sair";
+            bttn_Sair.UseVisualStyleBackColor = true;
+            bttn_Sair.Click += bttn_Sair_Click;
             // 
             // Form1
             // 
@@ -137,16 +137,16 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(checkBox1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(bttn_Sair);
+            Controls.Add(VerPassword);
+            Controls.Add(txtPassword);
+            Controls.Add(txtEmail);
+            Controls.Add(txtNome);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(bttn_VerRegistos);
+            Controls.Add(bttn_GuardarRegisto);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -155,15 +155,15 @@
 
         #endregion
 
-        private Button button4;
-        private Button button5;
+        private Button bttn_GuardarRegisto;
+        private Button bttn_VerRegistos;
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private CheckBox checkBox1;
-        private Button button1;
+        private TextBox txtNome;
+        private TextBox txtEmail;
+        private TextBox txtPassword;
+        private CheckBox VerPassword;
+        private Button bttn_Sair;
     }
 }

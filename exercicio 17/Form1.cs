@@ -9,36 +9,46 @@ namespace exercicio_17
         public Form1()
         {
             InitializeComponent();
-            textBox3.UseSystemPasswordChar = true;
+            Utilizador.nome = txtNome.Text;
+            Utilizador.email = txtEmail.Text;
+            Utilizador.password = txtPassword.Text;
+            txtPassword.UseSystemPasswordChar = true;
             form2 = new Form2(this);  // Passa uma referência do Form1 para o Form2
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void bttn_Sair_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked) { textBox3.UseSystemPasswordChar = false; }
-
-            else { textBox3.UseSystemPasswordChar = true; }
+            Environment.Exit(1);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void bttn_GuardarRegisto_Click(object sender, EventArgs e)
         {
-            string nome = textBox1.Text;
-            form2.AdicionarNome(nome);
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            MessageBox.Show($"Utilizador {nome} registado!");
+            Utilizador.nome = txtNome.Text;
+            Utilizador.email = txtEmail.Text;
+            Utilizador.password = txtPassword.Text;
+
+            if (Utilizador.nome == "" | Utilizador.email == "" | Utilizador.password == "")
+            {MessageBox.Show("Tem de preencher todas as caixas para registar", "Erro de Validação", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);}     
+            else {               
+                form2.AdicionarNome(Utilizador.nome,Utilizador.email);
+                txtNome.Text = "";
+                txtEmail.Text = "";
+                txtPassword.Text = "";
+                txtPassword.UseSystemPasswordChar = true;
+                MessageBox.Show($"Utilizador {Utilizador.nome} registado!");
+            }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void bttn_VerRegistos_Click(object sender, EventArgs e)
         {
             this.Hide();
             form2.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void VerPassword_CheckedChanged(object sender, EventArgs e)
         {
-            Environment.Exit(1);
+            if (VerPassword.Checked) { txtPassword.UseSystemPasswordChar = false; }
+            else { txtPassword.UseSystemPasswordChar = true; }
         }
     }
 }

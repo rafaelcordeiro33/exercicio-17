@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            button5 = new Button();
+            bttn_FazerRegistos = new Button();
             listBox1 = new ListBox();
-            button1 = new Button();
+            bttn_sair = new Button();
             SuspendLayout();
             // 
-            // button5
+            // bttn_FazerRegistos
             // 
-            button5.Location = new Point(592, 369);
-            button5.Name = "button5";
-            button5.Size = new Size(196, 48);
-            button5.TabIndex = 5;
-            button5.Text = "Fazer Registos";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            bttn_FazerRegistos.Location = new Point(592, 369);
+            bttn_FazerRegistos.Name = "bttn_FazerRegistos";
+            bttn_FazerRegistos.Size = new Size(196, 48);
+            bttn_FazerRegistos.TabIndex = 5;
+            bttn_FazerRegistos.Text = "Fazer Registos";
+            bttn_FazerRegistos.UseVisualStyleBackColor = true;
+            bttn_FazerRegistos.Click += bttn_FazerRegistos_Click;
             // 
             // listBox1
             // 
@@ -53,15 +53,15 @@
             listBox1.Size = new Size(288, 329);
             listBox1.TabIndex = 6;
             // 
-            // button1
+            // bttn_sair
             // 
-            button1.Location = new Point(726, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(62, 48);
-            button1.TabIndex = 7;
-            button1.Text = "Sair";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            bttn_sair.Location = new Point(726, 12);
+            bttn_sair.Name = "bttn_sair";
+            bttn_sair.Size = new Size(62, 48);
+            bttn_sair.TabIndex = 7;
+            bttn_sair.Text = "Sair";
+            bttn_sair.UseVisualStyleBackColor = true;
+            bttn_sair.Click += bttn_sair_Click;
             // 
             // Form2
             // 
@@ -70,9 +70,9 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(bttn_sair);
             Controls.Add(listBox1);
-            Controls.Add(button5);
+            Controls.Add(bttn_FazerRegistos);
             Name = "Form2";
             Text = "Form2";
             ResumeLayout(false);
@@ -80,8 +80,8 @@
 
         #endregion
 
-        private Button button5;
+        private Button bttn_FazerRegistos;
         private ListBox listBox1;
-        private Button button1;
+        private Button bttn_sair;
     }
 }

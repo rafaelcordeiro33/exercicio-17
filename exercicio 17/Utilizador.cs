@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace exercicio_17
 {
-    internal class Registos
+    internal class Utilizador
     {
         public static string nome;
+        public static string email;
+        public static string password;
     }
 }
